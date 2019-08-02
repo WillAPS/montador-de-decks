@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/will/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/entidades/MagicTrap.java</file>
-            <file>file:/home/will/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/entidades/Carta.java</file>
-            <file>file:/home/will/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/Main.java</file>
-            <file>file:/home/will/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/entidades/Personagem.java</file>
-            <file>file:/home/will/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/entidades/Deck.java</file>
-            <file>file:/home/will/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/entidades/Monstro.java</file>
+            <file>file:/home/will/Documentos/montador-de-decks/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/dao/IMagicTrapDAO.java</file>
+            <file>file:/home/will/Documentos/montador-de-decks/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/dao/IPersonagemDAO.java</file>
+            <file>file:/home/will/Documentos/montador-de-decks/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/dao/IMonstroDAO.java</file>
+            <file>file:/home/will/Documentos/montador-de-decks/montador-de-decks/montador-de-decks-domain/src/montador/de/decks/domain/dao/IDeckDAO.java</file>
         </group>
     </open-files>
 </project-private>
