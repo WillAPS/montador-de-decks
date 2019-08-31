@@ -30,10 +30,10 @@ public class DeckController {
     @GET
     @Path("/select")
     @Produces(MediaType.APPLICATION_JSON)
-    public Deck select(@QueryParam("id") int pk){
-        System.out.println("Parametro:"+pk);
+    public Deck select(@QueryParam("id") int id){
+        System.out.println("Parametro:"+id);
         for(Deck cat : banco.consultar()){
-            if(cat.getId() == pk)
+            if(cat.getId() == id)
                 return cat;
         }
         return null;

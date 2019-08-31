@@ -82,11 +82,11 @@ public class DeckDAOImplPostgreSQL implements IDeckDAO {
            ResultSet res = con.createStatement().executeQuery(sql);
            
            while(res.next()){
-               Deck c = new Deck();
-               c.setId(res.getInt("id"));
-               c.setNome(res.getString("nome"));
-               c.setQuantCards(res.getInt("quantCards"));
-               lista.add(c);
+               Deck d = new Deck();
+               d.setId(res.getInt("id"));
+               d.setNome(res.getString("nome"));
+               d.setQuantCards(res.getInt("quantCards"));
+               lista.add(d);
            }
            
            return lista;
