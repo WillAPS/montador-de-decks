@@ -13,8 +13,7 @@ public class Personagem {
     
     private int id;
     private String nome;
-    private int geracao;
-    private String resumo;
+    private String geracao;
 
     public int getId() {
         return id;
@@ -32,22 +31,11 @@ public class Personagem {
         this.nome = nome;
     }
 
-    public int getGeracao() {
+    public String getGeracao() {
         return geracao;
     }
 
-    public void setGeracao(int geracao) {
+    public void setGeracao(String geracao) {
         this.geracao = geracao;
-    }
-
-    public String getResumo() {
-        return resumo;
-    }
-
-    public void setResumo(String resumo) {
-        this.resumo = resumo;
-    }
-    
-    
-    
+    } 
 }

@@ -13,7 +13,6 @@ public class Deck {
     
     private int id;
     private String nome;
-    private String resumo;
     private int quantCards;
 
     public int getId() {
@@ -30,14 +29,6 @@ public class Deck {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getResumo() {
-        return resumo;
-    }
-
-    public void setResumo(String resumo) {
-        this.resumo = resumo;
     }
 
     public int getQuantCards() {

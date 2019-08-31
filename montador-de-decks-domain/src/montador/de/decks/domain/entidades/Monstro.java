@@ -11,7 +11,6 @@ package montador.de.decks.domain.entidades;
  */
 public class Monstro extends Carta {
 
-    private String atributo;
     private String tipo;
     private String tipoInvocacao;
     private boolean effect;
@@ -41,16 +40,6 @@ public class Monstro extends Carta {
 
     public void setEffect(boolean effect) {
         this.effect = effect;
-    }
-    
-    
-
-    public String getAtributo() {
-        return atributo;
-    }
-
-    public void setAtributo(String atributo) {
-        this.atributo = atributo;
     }
 
     public String getTipo() {

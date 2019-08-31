@@ -13,8 +13,6 @@ public class Carta {
     
     private int id;
     private String nome;
-    private String descricao;
-    private String foil;
     private Deck deck;
 
     public int getId() {
@@ -31,14 +29,6 @@ public class Carta {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getFoil() {
-        return foil;
-    }
-
-    public void setFoil(String foil) {
-        this.foil = foil;
     }
 
     public Deck getDeck() {
