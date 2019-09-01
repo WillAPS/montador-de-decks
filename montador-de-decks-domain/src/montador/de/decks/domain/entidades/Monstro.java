@@ -12,35 +12,11 @@ package montador.de.decks.domain.entidades;
 public class Monstro extends Carta {
 
     private String tipo;
-    private String tipoInvocacao;
-    private boolean effect;
-    private int star;
-    private int ataque;
-    private int defesa;
-
-    public int getStar() {
-        return star;
-    }
-
-    public void setStar(int star) {
-        this.star = star;
-    }
-
-    public String getTipoInvocacao() {
-        return tipoInvocacao;
-    }
-
-    public void setTipoInvocacao(String tipoInvocacao) {
-        this.tipoInvocacao = tipoInvocacao;
-    }
-
-    public boolean isEffect() {
-        return effect;
-    }
-
-    public void setEffect(boolean effect) {
-        this.effect = effect;
-    }
+    private String tipoinvocacao;
+    private String effect;
+    private String star;
+    private String ataque;
+    private String defesa;
 
     public String getTipo() {
         return tipo;
@@ -50,20 +26,45 @@ public class Monstro extends Carta {
         this.tipo = tipo;
     }
 
-    public int getAtaque() {
+    public String getTipoInvocacao() {
+        return tipoinvocacao;
+    }
+
+    public void setTipoInvocacao(String tipoinvocacao) {
+        this.tipoinvocacao = tipoinvocacao;
+    }
+
+    public String getEffect() {
+        return effect;
+    }
+
+    public void setEffect(String effect) {
+        this.effect = effect;
+    }
+
+    public String getStar() {
+        return star;
+    }
+
+    public void setStar(String star) {
+        this.star = star;
+    }
+
+    public String getAtaque() {
         return ataque;
     }
 
-    public void setAtaque(int ataque) {
+    public void setAtaque(String ataque) {
         this.ataque = ataque;
     }
 
-    public int getDefesa() {
+    public String getDefesa() {
         return defesa;
     }
 
-    public void setDefesa(int defesa) {
+    public void setDefesa(String defesa) {
         this.defesa = defesa;
     }
 
+    
 }

@@ -29,7 +29,10 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(controller.CartaController.class);
         resources.add(controller.DeckController.class);
+        resources.add(controller.MagicTrapController.class);
+        resources.add(controller.MonstroController.class);
         resources.add(controller.PersonagemController.class);
     }
     

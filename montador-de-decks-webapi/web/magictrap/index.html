@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cartas Magics and Traps</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+        
+            <style>
+                
+               body {  background-image : url(thumb-1920-890148.jpg)}
+                            
+               
+                
+                label {
+                    
+                    display: inline-block;
+                    width: 90px;
+                    text-align: right;
+                    }
+                    .button {
+
+                        padding-left: 90px; 
+                    }
+                    button {
+
+                        margin-left: .5em;
+                    }
+                    table , th , td{
+                        
+                        
+                       padding: 5px;
+                       font-size: 20px;
+                       font-family: "FreeMono";
+                        
+                        
+                    }
+                
+                select{
+                        
+                    display: inline-block;
+                    width: 200px;
+                    text-align: center;
+                    margin-top: 5px;
+                   
+                    
+                    }
+                    
+                
+            </style>
+        
+    </head>
+    <body>
+                
+        
+        
+        <form action="http://localhost:8080/montador-de-decks-webapi/api/magictrap/cadastrar" method="get">
+        <h1 style="font-family:URW Chancery L" >OBS !!! A CADA INTERACAO RETORNAR A ESTA PAGINA E DAR F5 PARA QUE AS ALTERAÇÕES SEJAM MOSTRADAS</h1>
+        
+        <h1 style="font-family:URW Chancery L" >Cadastra Magic/Trap</h1>
+        
+        <br />
+        <br />
+  
+        
+        <div>
+            <label for="nome">Name:</label>
+            <input type="text" id="nome" name="nome" />
+            <br />
+            <label for="effecttype">Tipo:</label>
+            <select name="effecttype">
+                <option>Selecione Tipo</option>
+                <option>Normal</option>
+                <option>Contínua</option>
+                <option>Equipamento</option>
+                <option>Campo</option>
+                <option>Rápida</option>
+                <option>Ritual</option>
+                <option>Contínua</option>
+            </select>
+        
+            <br />
+            <label for="magictrap">Tipo de Carta</label>
+            <select name="magictrap">
+                <option>Selecione o Tipo</option>
+                <option>Magia</option>
+                <option>Armadilha</option>
+            </select>
+        </div>     
+        
+        
+        <div class="button">
+            <button type="submit">Inserir</button>
+        </div>
+        
+    </form>
+    
+   <form action="http://localhost:8080/montador-de-decks-webapi/api/magictrap/select/" method="get">
+        
+        
+       <h1 style="font-family:URW Chancery L">Busca Magic/Trap</h1>
+        <div>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name=id />
+        </div>
+        
+        <div class="button">
+            
+            <button type="submit">Buscar</button>
+        </div>
+    </form>
+
+    <form action="http://localhost:8080/montador-de-decks-webapi/api/magictrap/atualizar/" method="get">
+        
+        
+        <h1 style="font-family:URW Chancery L" >Atualiza Magic/Trap</h1>
+        <div>
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" />
+        </div>
+        <div>
+            <label for="nome">NOME</label>
+            <input type="text" id="nome" name="nome" />
+        </div>
+        
+        <div class="button">
+            
+            <button type="submit">Atualizar</button>
+        </div>
+    </form>
+
+   <form action="http://localhost:8080/montador-de-decks-webapi/api/magictrap/remover/" method="get">
+        
+        
+        <h1 style="font-family:URW Chancery L" >Remove Magic/Trap</h1>
+        <div>
+            <label for="id">ID</label>
+            <input type="text" id="id" name=id />
+        </div>
+        
+        <div class="button">
+            
+            <button type="submit">Remove</button>
+        </div>
+    </form>
+
+    
+        <body>
+        <div></div>
+        <h1 style="font-family:URW Chancery L">Lista de Magic/Trap</h1>
+        <table border = 1>
+            
+            <thead>
+        
+              
+                <th style="font-family:URW Chancery L" >Id</th>
+                <th style="font-family:URW Chancery L" >Nome</th>
+                <th style="font-family:URW Chancery L">Tipo</th>
+                <th style="font-family:URW Chancery L" >Magic/Trap</th>
+              
+                
+                
+            </thead>
+            <tbody id = "dadossss">
+            </tbody>
+        </table>
+        <form method="get" action="http://localhost:8080/montador-de-decks-webapi/"><button type="submit">Menu Inicial</button></form> 
+    </body>
+        <script>
+        window.onload = function(){
+            $.get("http://localhost:8080/montador-de-decks-webapi/api/magictrap/", 
+            function(datas){
+                for(var i=0; i<datas.length;i++){
+                    var f = datas[i];
+                    var dadossss = $("#dadossss");
+                    dadossss.append("<tr>  <td>"+f.id+"</td>  <td>"+f.nome+"</td>  <td>"+f.effecttype+"</td> <td>"+f.magictrap+"</td> </tr>");
+                    
+                }
+            });
+        };
+    </script>
+    
+</html>

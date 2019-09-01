@@ -11,23 +11,23 @@ package montador.de.decks.domain.entidades;
  */
 public class MagicTrap extends Carta{
     
-    private String effectType;
-    private boolean magicTrap;
+    private String effecttype;
+    private String magictrap;
 
     public String getEffectType() {
-        return effectType;
+        return effecttype;
     }
 
-    public void setEffectType(String effectType) {
-        this.effectType = effectType;
+    public void setEffectType(String effecttype) {
+        this.effecttype = effecttype;
     }
 
-    public boolean isMagicTrap() {
-        return magicTrap;
+    public String getMagicTrap() {
+        return magictrap;
     }
 
-    public void setMagicTrap(boolean magicTrap) {
-        this.magicTrap = magicTrap;
+    public void setMagicTrap(String magictrap) {
+        this.magictrap = magictrap;
     }
     
     
